@@ -3,8 +3,13 @@ import java.util.ListIterator;
 
 public class App
 {
-    public static ArrayList<String> directStrings(ArrayList<Integer> randomNumbers, ArrayList<String> stringInput, int version, char seperatorChar)
+    public static ArrayList<String> randomNumberVersionNaming(ArrayList<Integer> randomNumbers, ArrayList<String> stringInput, float version, char seperatorChar)
     {
+        if(randomNumbers == null || stringInput == null)
+        {
+            return null;
+        }
+        
         if(randomNumbers.size() != stringInput.size())
         {
             return  null;
