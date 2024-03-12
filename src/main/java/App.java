@@ -117,14 +117,11 @@ public class App
                 sc1.close();
 
                 StringBuilder htmlResult = new StringBuilder();
-                htmlResult.append("<ul>");
                 for(String element : resultList)
                 {
-                    htmlResult.append("<li>");
                     htmlResult.append(element);
-                    htmlResult.append("</li>");
+                    htmlResult.append("\n");
                 }
-                htmlResult.append("</ul>");
 
                 String result = htmlResult.toString();
         
