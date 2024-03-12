@@ -37,6 +37,29 @@ public class AppTest
     }
 
     @Test
+    public void negativeVersionControlTest()
+    {
+        randomTestParamater = App.initializeRandomArray(2, 100);
+        assertNull(App.randomNumberVersionNaming(
+            randomTestParamater,
+            new ArrayList<String>(Arrays.asList(new String[]{"Deneme1", "Deneme2"})),
+            -5.0f,
+            '_'));
+    }
+
+    //TODO: Parameter test can be implemented.
+    @Test
+    public void seperatorCharControlTest()
+    {
+        randomTestParamater = App.initializeRandomArray(2, 100);
+        assertNull(App.randomNumberVersionNaming(
+            randomTestParamater,
+            new ArrayList<String>(Arrays.asList(new String[]{"Deneme1", "Deneme2"})),
+            1.0f,
+            '\0'));
+    }
+
+    @Test
     public void equalityControlTest()
     {
         //initializeRandomArray(5, 100);

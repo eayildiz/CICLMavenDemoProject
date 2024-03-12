@@ -35,6 +35,11 @@ public class App
             return null;
         }
 
+        if(seperatorChar == '\0' || seperatorChar == '\n' || seperatorChar == '\t')
+        {
+            return null;
+        }
+
         ListIterator<Integer> randomNumIterator =  randomNumbers.listIterator();
         ListIterator<String> stringIterator =  stringInput.listIterator();
 
