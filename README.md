@@ -14,5 +14,4 @@ My project create new names for files.
      */
 
 	Function take a list of strings and add them random generated list of integer, seperator char and version number.
-
 	Returns null if any parameter is not available.

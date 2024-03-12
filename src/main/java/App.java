@@ -106,7 +106,7 @@ public class App
                 String input3 = req.queryParams("input3");
                 char seperatorChar = input3.charAt(0);
 
-                ArrayList<String> result = App.randomNumberVersionNaming(
+                ArrayList<String> resultList = App.randomNumberVersionNaming(
                                                     initializeRandomArray(stringtList.size(), 100),
                                                     stringtList,
                                                     version,
@@ -116,7 +116,7 @@ public class App
 
                 StringBuilder htmlResult = new StringBuilder();
                 htmlResult.append("<ul>");
-                for(String element : result)
+                for(String element : resultList)
                 {
                     htmlResult.append("<li>");
                     htmlResult.append(element);
@@ -124,7 +124,8 @@ public class App
                 }
                 htmlResult.append("</ul>");
 
-                return new ModelAndView(htmlResult.toString(), "compute.mustache");
+                String result = htmlResult.toString();
+                return new ModelAndView(result, "compute.mustache");
             }, new MustacheTemplateEngine());
 
 
