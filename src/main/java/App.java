@@ -87,15 +87,30 @@ public class App
                 String input1 = req.queryParams("input1");
                 java.util.Scanner sc1 = new java.util.Scanner(input1);
                 sc1.useDelimiter("[;\r\n]+");
-                java.util.ArrayList<String> inputList = new java.util.ArrayList<>();
+                java.util.ArrayList<String> stringtList = new java.util.ArrayList<>();
                 while (sc1.hasNext())
                 {
                     String value = sc1.next().replaceAll("\\s","");
-                    inputList.add(value);
+                    stringtList.add(value);
                 }
-                System.out.println(inputList);
+                System.out.println(stringtList);
 
-                ArrayList<String> result = App.randomNumberVersionNaming(initializeRandomArray(5, 100), inputList, 1.0f, '_');
+                String input2 = req.queryParams("input2");
+                float version = 1.0f;
+                try {
+                    version = Float.parseFloat(input2);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+
+                String input3 = req.queryParams("input3");
+                char seperatorChar = input3.charAt(0);
+
+                ArrayList<String> result = App.randomNumberVersionNaming(
+                                                    initializeRandomArray(stringtList.size(), 100),
+                                                    stringtList,
+                                                    version,
+                                                    seperatorChar);
                 
                 sc1.close();
 
