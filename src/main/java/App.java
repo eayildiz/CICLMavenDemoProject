@@ -3,6 +3,13 @@ import java.util.ListIterator;
 
 public class App
 {
+    /**
+     * @param randomNumbers
+     * @param stringInput
+     * @param version
+     * @param seperatorChar
+     * @return
+     */
     public static ArrayList<String> randomNumberVersionNaming(ArrayList<Integer> randomNumbers, ArrayList<String> stringInput, float version, char seperatorChar)
     {
         if(randomNumbers == null || stringInput == null)
@@ -13,6 +20,11 @@ public class App
         if(randomNumbers.size() != stringInput.size())
         {
             return  null;
+        }
+
+        if(version < 0)
+        {
+            return null;
         }
 
         ListIterator<Integer> randomNumIterator =  randomNumbers.listIterator();
