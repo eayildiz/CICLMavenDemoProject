@@ -114,7 +114,17 @@ public class App
                 
                 sc1.close();
 
-                return new ModelAndView(result, "compute.mustache");
+                StringBuilder htmlResult = new StringBuilder();
+                htmlResult.append("<ul>");
+                for(String element : result)
+                {
+                    htmlResult.append("<li>");
+                    htmlResult.append(element);
+                    htmlResult.append("</li>");
+                }
+                htmlResult.append("</ul>");
+
+                return new ModelAndView(htmlResult.toString(), "compute.mustache");
             }, new MustacheTemplateEngine());
 
 
