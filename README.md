@@ -1,3 +1,6 @@
+Travis link:
+[![Build Status](https://app.travis-ci.com/eayildiz/CICLMavenDemoProject.svg?token=6ixPzyrDSbSs6K5Sq72q&branch=master)](https://app.travis-ci.com/eayildiz/CICLMavenDemoProject)
+
 My project create new names for files.
     /**randomNumberVersionNaming()
      * @param ArrayList<Integer>	randomNumbers
