@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.ListIterator;
+import java.util.Map;
 
 import static spark.Spark.get;
 import static spark.Spark.port;
@@ -125,16 +127,23 @@ public class App
                 htmlResult.append("</ul>");
 
                 String result = htmlResult.toString();
-                return new ModelAndView(result, "compute.mustache");
+        
+                Map map = new HashMap();
+                map.put("result", result);
+
+                return new ModelAndView(map, "compute.mustache");
             }, new MustacheTemplateEngine());
 
 
         get("/compute",
             (rq, rs) ->
             {
-                ArrayList<String> result = new ArrayList<>();
-                result.add("Empty, Initialized.");
-                return new ModelAndView(result, "compute.mustache");
+                String result = "Empty, Uninitialized.";
+                
+                Map map = new HashMap();
+                map.put("result", result);
+
+                return new ModelAndView(map, "compute.mustache");
             },
             new MustacheTemplateEngine());
     }
