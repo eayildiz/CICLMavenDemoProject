@@ -28,11 +28,11 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    <finalName>myDemoApp-1.0-SNAPSHOT</finalName>
+                    <finalName>CICLMavenDemoProject-1.0-SNAPSHOT</finalName>
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>com.mycompany.app.App</mainClass>
+                            <mainClass>App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
