@@ -1,7 +1,5 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.ListIterator;
-import java.util.Map;
 
 import static spark.Spark.get;
 import static spark.Spark.port;

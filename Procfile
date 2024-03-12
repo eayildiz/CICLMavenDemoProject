@@ -1,0 +1,1 @@
+web: java -jar target/CICLMavenDemoProject-1.0-SNAPSHOT.jar
