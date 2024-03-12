@@ -10,19 +10,12 @@ public class AppTest
 {
     private ArrayList<Integer> randomTestParamater;
 
-    private void initializeRandomArray(int length, int limit)
-    {
-        randomTestParamater = new ArrayList<>();
-        for (int i = 0; i < length; i++)
-        {
-            randomTestParamater.add( (int) (Math.random() * limit));
-        }
-    }
+    
 
     @Test
     public void nullParameterControlTest()
     {
-        initializeRandomArray(5, 100);
+        randomTestParamater = App.initializeRandomArray(5, 100);
         assertNull(App.randomNumberVersionNaming(
             randomTestParamater,
             null,
@@ -34,7 +27,7 @@ public class AppTest
     @Test
     public void parameterLengthControlTest()
     {
-        initializeRandomArray(5, 100);
+        randomTestParamater = App.initializeRandomArray(5, 100);
         assertNull(App.randomNumberVersionNaming(
             randomTestParamater,
             new ArrayList<String>(Arrays.asList(new String[]{"Deneme1", "Deneme2"})),
